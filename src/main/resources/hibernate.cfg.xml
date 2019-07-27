@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<hibernate-configuration>
+    <session-factory>
+        <property name="hibernate.connection.driver_class">org.postgresql.Driver</property>
+        <property name="hibernate.connection.url">jdbc:postgresql://localhost:5432/car_fabric</property>
+        <property name="hibernate.connection.username">postgres</property>
+        <property name="hibernate.connection.password">password</property>
+        <property name="hibernate.dialect">org.hibernate.dialect.PostgreSQL94Dialect</property>
+        <property name="hibernate.hbm2ddl.auto">update</property>
+        <property name="hibernate.current_session_context_class">thread</property>
+
+        <!--  annotation mapping -->
+        <mapping class="ru.job4j.entity.car.Color"/>
+        <mapping class="ru.job4j.entity.car.Engine"/>
+        <mapping class="ru.job4j.entity.car.Year"/>
+        <mapping class="ru.job4j.entity.car.Body"/>
+        <mapping class="ru.job4j.entity.car.Car"/>
+        <mapping class="ru.job4j.entity.user.User"/>
+        <mapping class="ru.job4j.entity.ad.Ad"/>
+
+    </session-factory>
+</hibernate-configuration>
