@@ -40,9 +40,6 @@
           <element id="library" level="project" name="Maven: org.slf4j:slf4j-log4j12:1.7.26" />
           <element id="library" level="project" name="Maven: log4j:log4j:1.2.17" />
           <element id="library" level="project" name="Maven: org.jsoup:jsoup:1.11.3" />
-          <element id="library" level="project" name="Maven: org.postgresql:postgresql:42.2.5" />
-          <element id="library" level="project" name="Maven: org.apache.tomcat:tomcat-jdbc:9.0.22" />
-          <element id="library" level="project" name="Maven: org.apache.tomcat:tomcat-juli:9.0.22" />
         </element>
       </element>
       <element id="directory" name="META-INF">
