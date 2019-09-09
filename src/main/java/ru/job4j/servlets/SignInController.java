@@ -17,8 +17,11 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
 import java.io.IOException;
+import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
+import java.util.stream.Collectors;
+import java.util.stream.IntStream;
 
 public class SignInController extends HttpServlet {
     private static final UserService USER_SERVICE = UserService.getInstance();
@@ -54,10 +57,7 @@ public class SignInController extends HttpServlet {
                 ENGINE_SERVICE.save(engine);
             }
         }
-        List<Integer> years = Arrays.asList(1985, 1986, 1987, 1988, 1989, 1990,
-                1991, 1992, 1993, 1994, 1995, 1996, 1997, 1998, 1999, 2000, 2001, 2002, 2003,
-                2004, 2005, 2006, 2007, 2008, 2009, 2010, 2011, 2012, 2013, 2014, 2015, 2016,
-                2017, 2018, 2019);
+        List<Integer> years = IntStream.range(1960, 2020).collect(ArrayList::new, ArrayList::add, ArrayList::addAll);
         for (int yearValue : years) {
             if (!YEAR_SERVICE.contains(yearValue)) {
                 Year year = new Year();
@@ -73,11 +73,19 @@ public class SignInController extends HttpServlet {
             guest.setRole("guest");
             USER_SERVICE.save(guest);
         }
+        if (!USER_SERVICE.contains("user")) {
+            User user = new User();
+            user.setLogin("user");
+            user.setPassword("user");
+            user.setPhone("8(495)630-10-10");
+            user.setRole("user");
+            USER_SERVICE.save(user);
+        }
         if (!USER_SERVICE.contains("admin")) {
             User admin = new User();
             admin.setLogin("admin");
             admin.setPassword("admin");
-            admin.setPhone("0000000000");
+            admin.setPhone("8(495)950-40-40");
             admin.setRole("admin");
             USER_SERVICE.save(admin);
         }
