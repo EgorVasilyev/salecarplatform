@@ -17,7 +17,7 @@
     <servlet>
         <servlet-name>AdsServlet</servlet-name>
         <servlet-class>ru.job4j.servlets.AdsServlet</servlet-class>
-        <load-on-startup>2</load-on-startup>
+        <load-on-startup>3</load-on-startup>
     </servlet>
     <servlet-mapping>
         <servlet-name>AdsServlet</servlet-name>
@@ -27,7 +27,7 @@
     <servlet>
         <servlet-name>UsersServlet</servlet-name>
         <servlet-class>ru.job4j.servlets.UsersServlet</servlet-class>
-        <load-on-startup>3</load-on-startup>
+        <load-on-startup>2</load-on-startup>
     </servlet>
     <servlet-mapping>
         <servlet-name>UsersServlet</servlet-name>
