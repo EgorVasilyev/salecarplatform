@@ -68,7 +68,7 @@
                 <input type='hidden' name='action' value='goToUserAds'/>
                 <input type='hidden' name='userId' value='${activeUser.id}'/>
                 <button type="submit" class="btn-info">
-                    <span class="glyphicon glyphicon-list"></span> My ads
+                    <span class="glyphicon glyphicon-list"></span> Show my ads
                 </button>
             </form>
             <form action='${pageContext.servletContext.contextPath}/signIn' method="get">
